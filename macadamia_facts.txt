@@ -1,0 +1,100 @@
+1. Flower blight affects the macadamia inflorescence.
+2. A primary symptom of flower blight is necrosis of the flowers.
+3. A primary symptom of flower blight is death of the inflorescence.
+4. Grey Mould is caused by the fungus Botrytis cinerea.
+5. A symptom of Grey Mould is grey fungal growth on the flowers.
+6. Grey Mould infection is favored by cool weather.
+7. Grey Mould infection is favored by wet and humid conditions.
+8. Botrytis cinerea penetrates plant cells directly.
+9. Botrytis cinerea produces calcium oxalate crystals during infection.
+10. Botrytis cinerea germinates approximately 3 hours post-inoculation.
+11. Green Mould is caused by Cladosporium cladosporioides.
+12. A symptom of Green Mould is olive-green fungal growth on racemes.
+13. A symptom of Green Mould is a velvety texture on the infected area.
+14. Green Mould infection is favored by wet and humid conditions.
+15. Cladosporium cladosporioides uses both direct penetration and appressoria.
+16. Cladosporium cladosporioides germinates approximately 3 hours post-inoculation.
+17. Dry Flower is caused by Neopestalotiopsis macadamiae.
+18. Dry Flower is caused by Pestalotiopsis species.
+19. A symptom of Dry Flower is unopened flowers appearing dried.
+20. A symptom of Dry Flower is dried flowers remaining attached to the tree.
+21. A symptom of Dry Flower is necrosis of the rachis.
+22. Neopestalotiopsis macadamiae penetrates exclusively using appressoria.
+23. Neopestalotiopsis macadamiae germinates in 1.5 hours.
+24. Phytophthora Blight of flowers is caused by Phytophthora capsici.
+25. Husk Spot is caused by Pseudocercospora macadamiae.
+26. An early symptom of Husk Spot is pale yellow flecks on the husk.
+27. An early symptom of Husk Spot is chlorotic flecks with a diffuse halo.
+28. A late symptom of Husk Spot is dark yellow-to-tan colored spots.
+29. A major consequence of Husk Spot is premature nut drop.
+30. Husk Spot affects the pericarp.
+31. Husk Spot is prevalent in sticktight varieties.
+32. Husk Spot is favored by multiple rainy days.
+33. Husk Rot is a disease complex caused by multiple fungi.
+34. Causal agents of Husk Rot include Colletotrichum species.
+35. Causal agents of Husk Rot include Diaporthe species.
+36. Causal agents of Husk Rot include Lasiodiplodia species.
+37. A symptom of Husk Rot is soft and spongy black lesions on the husk.
+38. Husk Rot lesions can be up to 10mm in diameter.
+39. A symptom of Husk Rot is greasy decay of the fruit.
+40. Husk Rot is triggered by prolonged wet weather of 2 to 5 days.
+41. Husk Rot is triggered by warm temperatures.
+42. Husk Rot is triggered by pin-hole injuries from insects.
+43. Root Rot is caused by Phytophthora cinnamomi.
+44. A symptom of Root Rot is gradual decline of the tree.
+45. A symptom of Root Rot is pale green or yellow-green leaves.
+46. A symptom of Root Rot is a sparse canopy.
+47. A symptom of Root Rot is stunted tree growth.
+48. A symptom of Root Rot is branch dieback.
+49. Root Rot is favored by poor drainage.
+50. Root Rot is favored by water ponding.
+51. Root Rot symptoms become visible when the tree is under moisture stress.
+52. The Root Rot pathogen is soilborne.
+53. Branch Dieback is caused by the Botryosphaeriaceae family.
+54. Specific agents of Branch Dieback include Lasiodiplodia theobromae.
+55. Specific agents of Branch Dieback include Neofusicoccum species.
+56. A symptom of Branch Dieback is cankers on the branches.
+57. A symptom of Branch Dieback is branch dieback.
+58. A severe symptom of Branch Dieback is complete tree death.
+59. The Branch Dieback pathogen enters the tree through wounds.
+60. Anthracnose is caused by the Colletotrichum gloeosporioides species complex.
+61. A specific agent of Anthracnose is Colletotrichum siamense.
+62. Anthracnose affects the leaves.
+63. Anthracnose affects the shoots.
+64. Anthracnose affects the fruits.
+65. Macadamia Nut Borer in Kenya is primarily Cryptophlebia ombrodelta.
+66. Macadamia Nut Borer in South Africa is primarily Thaumatotibia batrachopa.
+67. Macadamia Nut Borer larvae bore into the husk.
+68. A visible symptom of Macadamia Nut Borer is entry holes in the husk.
+69. A visible symptom of Macadamia Nut Borer is larval frass protruding from holes.
+70. A visible symptom of Macadamia Nut Borer is premature nut drop.
+71. An internal symptom of Macadamia Nut Borer is tunneling in the husk.
+72. An internal symptom of Macadamia Nut Borer is hollow dimple marks on the shell.
+73. If Macadamia Nut Borer attacks before shell hardening the entire kernel is eaten.
+74. Macadamia Nut Borer damage leads to secondary fungal infections.
+75. Stink bug damage is caused by Nezara viridula.
+76. The Stink bug feeds by piercing the husk and shell.
+77. A symptom of Stink bug damage is a discolored pit on the kernel surface.
+78. Stink bug damage is not visible on the outside of the nut.
+79. Stink bug damage is often only found after processing.
+80. Severe Stink bug infestation causes immature nut drop.
+81. Feeding probes from Stink bugs can be detected using Ruthenium Red dye.
+82. Macadamia Felted Coccid is caused by Eriococcus ironsidei.
+83. A symptom of Macadamia Felted Coccid is white felt-like sacs on branches.
+84. A symptom of Macadamia Felted Coccid is the excretion of honeydew.
+85. A symptom of Macadamia Felted Coccid is sooty mold growing on honeydew.
+86. The Macadamia Felted Coccid sucks sap from the tree.
+87. Macadamia Felted Coccid infestations are usually found on the lower branches.
+88. Thrips damage is caused by Scirtothrips species.
+89. Thrips damage new flush.
+90. Thrips damage flowers.
+91. Moisture stress causes wilting.
+92. Moisture stress triggers visible symptoms of Phytophthora.
+93. Water logging promotes root rot.
+94. Heat stress affects general tree health.
+95. Salinity affects general tree health.
+96. Sudden Death Syndrome is triggered by severe stress combined with pathogens.
+97. Improper harvesting results in immature nuts.
+98. Immature nuts have low oil content.
+99. Failure to air-dry nuts results in fungal decay.
+100. Failure to air-dry nuts results in degradation of nut grade.
