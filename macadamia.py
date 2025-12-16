@@ -14,7 +14,7 @@ id_to_str = {}
 id_counter = 1
 
 def get_id(text):
-    """Converts a string to a unique Z3 BitVector ID."""
+    # Converts a string to a unique Z3 BitVector ID
     global id_counter
     if not text: return None
     
@@ -27,7 +27,7 @@ def get_id(text):
     return str_to_id[clean_text]
 
 def get_name(z3_val):
-    """Converts a Z3 ID back to its original string representation."""
+    # Converts a Z3 ID back to its original string representation
     try:
         return id_to_str.get(z3_val.as_long(), str(z3_val))
     except:
@@ -49,7 +49,7 @@ fp.register_relation(treated_with)
 z3_facts_output = [] 
 
 def add_fact(relation, arg1, arg2):
-    """Asserts a fact in Z3 and logs it for file export."""
+    # Asserts a fact in Z3 and logs it for file export
     fp.fact(relation(arg1, arg2))
     # Store in SMT-LIB format for external validation
     z3_facts_output.append(f"(rule ({relation.name()} {arg1.as_long()} {arg2.as_long()}))")

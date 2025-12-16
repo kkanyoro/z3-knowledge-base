@@ -19,7 +19,6 @@
   - [System Architecture](#system-architecture)
     - [1. The Z3 Logic Engine](#1-the-z3-logic-engine)
     - [2. Logical Inference Rules](#2-logical-inference-rules)
-    - [Assignment Note](#assignment-note)
 
 ---
 
@@ -116,9 +115,3 @@ fp.rule(cures_symptom(t, s), [treated_with(t, d), has_symptom(d, s)])
 This allows the system to "bridge the gap" between symptoms and treatments without explicit hard-coding.
 
 ---
-
-### Assignment Note
-
-This project creates a **Knowledge-Based System** by implementing a formal **Inference Engine** rather than a simple search algorithm. It demonstrates the separation of **Knowledge** (CSV), **Logic** (Z3 Rules), and **Presentation** (Streamlit).
-
-```

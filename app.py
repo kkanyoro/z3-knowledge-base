@@ -107,7 +107,7 @@ def load_kb():
     
     final_z3_string = "\n".join(z3_content)
     
-    #SAVE TO DISK HERE
+    # SAVE TO DISK HERE
     try:
         with open("macadamia_facts.z3", "w", encoding="utf-8") as z3_file:
             z3_file.write(final_z3_string)
@@ -121,11 +121,12 @@ def load_kb():
 fp, has_symptom_rel, treated_with_rel, cures_symptom_rel, get_id, get_name, symptoms, diseases, ThingType, file_saved = load_kb()
 
 if not fp:
-    st.error("Error: 'minimal_macadamia.csv' file not found.")
+    st.error("Error: 'macadamia.csv' file not found.")
     st.stop()
 
-if file_saved:
-    st.toast("'macadamia.z3' saved to project folder!")
+if file_saved and "notification_shown" not in st.session_state:
+    st.toast("'macadamia_facts.z3' saved to project folder!")
+    st.session_state["notification_shown"] = True
 
 # Helper to extract clean text from Z3 results
 def parse_results(ans_obj):
@@ -196,7 +197,7 @@ with tab2:
         st.divider()
         d_id = get_id(selected_disease)
         
-        #  SYMPTOMS (Query: has_symptom(SelectedDisease, s))
+        # SYMPTOMS (Query: has_symptom(SelectedDisease, s))
         s_var = Const('s', ThingType)
         fp.declare_var(s_var)
         sym_result = fp.query(has_symptom_rel(d_id, s_var))
@@ -218,6 +219,6 @@ with tab2:
         if treat_result == sat:
             found_treatments = parse_results(fp.get_answer())
             for treat in found_treatments:
-                st.success(f"{treat}")
+                st.success(f"💊 {treat}")
         else:
             st.warning("No treatments recorded.")
