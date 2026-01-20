@@ -143,45 +143,54 @@ tab1, tab2 = st.tabs(["Symptom Checker", "Disease Lookup"])
 # TAB 1: SEARCH BY SYMPTOM
 with tab1:
     st.header("Diagnose by Symptom")
-    selected_symptom = st.selectbox(
-        "I see this symptom:",
+    
+    selected_symptoms = st.multiselect(
+        "I see these symptoms:",
         symptoms, 
-        index=None, 
-        placeholder="Select a symptom..."
-        )
+        placeholder="Select one or more symptoms..."
+    )
 
     if st.button("Diagnose Problem"):
         st.divider()
-        s_id = get_id(selected_symptom)
         
-        # DIAGNOSIS (What disease has this symptom?)
-        d_var = Const('d', ThingType)
-        fp.declare_var(d_var)
-        diag_result = fp.query(has_symptom_rel(d_var, s_id))
-        
-        found_disease = False
-        if diag_result == sat:
-            diseases_found = parse_results(fp.get_answer())
-            for d in diseases_found:
-                st.error(f"**Potential Cause:** {d}")
-                found_disease = True
+        if not selected_symptoms:
+            st.warning("Please select at least one symptom.")
         else:
-            st.warning("Unknown disease.")
-
-        # PRESCRIPTION (What cures this symptom?)
-        if found_disease:
-            t_var = Const('t', ThingType)
-            fp.declare_var(t_var)
-            cure_result = fp.query(cures_symptom_rel(t_var, s_id))
+            # Potential diseases found for any of the symptoms
+            potential_diseases = set()
             
-            if cure_result == sat:
-                treatments = parse_results(fp.get_answer())
-                if treatments:
-                    st.success(f"**Recommended Treatments:** {', '.join(treatments)}")
-                else:
-                    st.info("No specific chemical treatment listed.")
+            # Loop through each selected symptom
+            for symptom in selected_symptoms:
+                s_id = get_id(symptom)
+                
+                # DIAGNOSIS
+                d_var = Const('d', ThingType)
+                fp.declare_var(d_var)
+                diag_result = fp.query(has_symptom_rel(d_var, s_id))
+                
+                if diag_result == sat:
+                    diseases_found = parse_results(fp.get_answer())
+                    potential_diseases.update(diseases_found)
+
+            if potential_diseases:
+                for d in potential_diseases:
+                    st.error(f"**Potential Cause:** {d}")
+                    
+                    # PRESCRIPTION
+                    d_id_val = get_id(d)
+                    t_var = Const('t', ThingType)
+                    fp.declare_var(t_var)
+                    
+                    # Query: treated_with(Treatment, Disease)
+                    treat_result = fp.query(treated_with_rel(t_var, d_id_val))
+                    
+                    if treat_result == sat:
+                        treatments = parse_results(fp.get_answer())
+                        st.success(f"  ↳ **Recommended Treatments:** {', '.join(treatments)}")
+                    else:
+                        st.info("  ↳ No specific chemical treatment listed.")
             else:
-                st.info("No cure found in database.")
+                st.warning("No diseases found matching these symptoms.")
 
 # TAB 2: SEARCH BY DISEASE
 with tab2:
